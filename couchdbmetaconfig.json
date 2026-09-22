@@ -1,0 +1,46 @@
+[
+    {
+        "ConfigFile": "etc/local.ini",
+        "Subsections": [
+            {
+                "Heading": "chttpd",
+                "SettingMappings": {
+                    "port": "$ServerPort",
+                    "bind_address": "$ApplicationIPBinding",
+                    "enable_cors": "EnableCors"
+                }
+            },
+            {
+                "Heading": "cors",
+                "SettingMappings": {
+                    "origins": "CorsOrigins"
+                }
+            },
+            {
+                "Heading": "couchdb",
+                "SettingMappings": {
+                    "max_document_size": "MaxDocumentSize",
+                    "max_attachment_size": "MaxAttachmentSize"
+                }
+            },
+            {
+                "Heading": "smoosh.ratio_dbs",
+                "SettingMappings": {
+                    "min_priority": "CompactionRatio"
+                }
+            },
+            {
+                "Heading": "smoosh.ratio_views",
+                "SettingMappings": {
+                    "min_priority": "CompactionRatio"
+                }
+            },
+            {
+                "Heading": "admins",
+                "SettingMappings": {
+                    "admin": "AdminPassword"
+                }
+            }
+        ]
+    }
+]

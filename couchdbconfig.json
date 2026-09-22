@@ -1,0 +1,92 @@
+[
+    {
+        "Category": "CouchDB:database",
+        "Subcategory": "Server:dns:1",
+        "Keywords": "",
+        "IsFlagArgument": false,
+        "IncludeInCommandLine": false,
+        "EnumValues": {},
+        "DisplayName": "Admin Password",
+        "Description": "Password for the 'admin' server administrator. Written to local.ini; CouchDB replaces it with a hash on start.",
+        "FieldName": "AdminPassword",
+        "InputType": "password",
+        "ParamFieldName": "AdminPassword",
+        "Required": true,
+        "DefaultValue": ""
+    },
+    {
+        "Category": "CouchDB:database",
+        "Subcategory": "Server:dns:1",
+        "Keywords": "",
+        "IsFlagArgument": false,
+        "IncludeInCommandLine": false,
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "DisplayName": "Enable CORS",
+        "Description": "Required for PouchDB-based clients such as DRAFFT.",
+        "FieldName": "EnableCors",
+        "InputType": "checkbox",
+        "ParamFieldName": "EnableCors",
+        "DefaultValue": "true"
+    },
+    {
+        "Category": "CouchDB:database",
+        "Subcategory": "Server:dns:1",
+        "Keywords": "",
+        "IsFlagArgument": false,
+        "IncludeInCommandLine": false,
+        "EnumValues": {},
+        "DisplayName": "CORS Origins",
+        "Description": "Comma-separated list of allowed origins, or * for any.",
+        "FieldName": "CorsOrigins",
+        "InputType": "text",
+        "ParamFieldName": "CorsOrigins",
+        "DefaultValue": "*"
+    },
+    {
+        "Category": "CouchDB:database",
+        "Subcategory": "Server:dns:1",
+        "Keywords": "",
+        "IsFlagArgument": false,
+        "IncludeInCommandLine": false,
+        "EnumValues": {},
+        "DisplayName": "Max Document Size",
+        "Description": "Maximum JSON document size. Larger writes fail with HTTP 413.",
+        "FieldName": "MaxDocumentSize",
+        "InputType": "number",
+        "ParamFieldName": "MaxDocumentSize",
+        "DefaultValue": "8000000",
+        "Suffix": "bytes"
+    },
+    {
+        "Category": "CouchDB:database",
+        "Subcategory": "Server:dns:1",
+        "Keywords": "",
+        "IsFlagArgument": false,
+        "IncludeInCommandLine": false,
+        "EnumValues": {},
+        "DisplayName": "Max Attachment Size",
+        "Description": "Maximum size of a single attachment (images, audio, video). Lowering it rejects bigger uploads and replications that carry them.",
+        "FieldName": "MaxAttachmentSize",
+        "InputType": "number",
+        "ParamFieldName": "MaxAttachmentSize",
+        "DefaultValue": "1073741824",
+        "Suffix": "bytes"
+    },
+    {
+        "Category": "CouchDB:database",
+        "Subcategory": "Server:dns:1",
+        "Keywords": "",
+        "IsFlagArgument": false,
+        "IncludeInCommandLine": false,
+        "EnumValues": {},
+        "DisplayName": "Auto-Compaction Ratio",
+        "Description": "Automatic compaction starts when file size / live data size exceeds this value. CouchDB default is 2.0; lower means more frequent compaction and less wasted disk.",
+        "FieldName": "CompactionRatio",
+        "InputType": "text",
+        "ParamFieldName": "CompactionRatio",
+        "DefaultValue": "1.5"
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "TCP",
+        "Port": 5984,
+        "Name": "HTTP API Port",
+        "Description": "CouchDB HTTP API and Fauxton web UI (/_utils)",
+        "Ref": "ServerPort"
+    }
+]

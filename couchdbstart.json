@@ -1,0 +1,10 @@
+[
+    {
+        "UpdateStageName": "Write amp-base.ini",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"mkdir -p '{{$FullBaseDir}}data/.smoosh' '{{$FullBaseDir}}etc' && printf '%s\\n' '[couchdb]' 'database_dir = {{$FullBaseDir}}data' 'view_index_dir = {{$FullBaseDir}}data' 'single_node = true' '' '[smoosh]' 'state_dir = {{$FullBaseDir}}data/.smoosh' '' '[log]' 'writer = stderr' 'level = info' '' '[cors]' 'credentials = true' 'methods = GET, PUT, POST, HEAD, DELETE' 'headers = accept, authorization, content-type, origin, referer' > '{{$FullBaseDir}}etc/amp-base.ini'\"",
+        "SkipOnFailure": false
+    }
+]

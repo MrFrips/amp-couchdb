@@ -1,0 +1,29 @@
+[
+    {
+        "UpdateStageName": "Check Host CouchDB",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"if [ ! -x /opt/couchdb/bin/couchdb ]; then echo 'CouchDB is not installed on the host (/opt/couchdb). Install it from the Apache apt repository first.'; exit 1; fi; if [ ! -r /opt/couchdb/etc/vm.args ] || [ ! -r /opt/couchdb/etc/default.ini ]; then echo 'AMP user cannot read /opt/couchdb/etc. Run: sudo usermod -aG couchdb amp, then restart AMP.'; exit 1; fi; echo 'Host CouchDB found.'\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Create Data Directory",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}data"
+    },
+    {
+        "UpdateStageName": "Create Config Directory",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}etc"
+    },
+    {
+        "UpdateStageName": "Create local.ini",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "CreateFile",
+        "UpdateSourceArgs": "{{$FullBaseDir}}etc/local.ini",
+        "OverwriteExistingFiles": false
+    }
+]
